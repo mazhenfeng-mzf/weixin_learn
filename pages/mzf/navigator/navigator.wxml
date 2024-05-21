@@ -1,0 +1,2 @@
+<!--pages/mzf/navigator/navigator.wxml-->
+<navigator url="pages/index/index" open-type="navigate"> 跳转 </navigator>

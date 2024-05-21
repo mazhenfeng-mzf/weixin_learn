@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "my-test": "/components/test/test",
+    "my-test2": "/components/test2observers/test2",
+    "my-test4": "/components/test4slot/test4",
+    "my-test5": "/components/test5/test5"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#efefef",
+
+  "backgroundTextStyle": "light",
+
+  "navigationBarBackgroundColor": "#ff0000"
+}

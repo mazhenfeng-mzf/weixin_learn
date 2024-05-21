@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/mzf_tabBar/home/home",
+    "pages/mzf_tabBar/contect/contect",
+    "pages/mzf_tabBar/message/message",
+    "pages/mzf_tabBar/shoplist/shoplist",
+    "pages/mzf/wxss/wxss",
+    "pages/mzf/if/if",
+    "pages/mzf/http/http",
+    "pages/mzf/tarbar/tarbar",
+    "pages/mzf/input/input",
+    "pages/mzf/button/button",
+    "pages/mzf/list/list",
+    "pages/mzf/swiper/swiper",
+    "pages/mzf/scroll/scroll"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarTitleText": "黑马",
+    "navigationBarTextStyle": "black",
+
+    "backgroundColor": "#efefef",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list":[
+      {
+        "iconPath": "/images/tabBar/home.png",
+        "selectedIconPath": "/images/tabBar/home-active.png",
+        "pagePath": "pages/mzf_tabBar/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/images/tabBar/message.png",
+        "selectedIconPath": "/images/tabBar/message-active.png",
+        "pagePath": "pages/mzf_tabBar/message/message",
+        "text": "消息"
+      },
+      {
+        "iconPath": "/images/tabBar/contect.png",
+        "selectedIconPath": "/images/tabBar/contect-active.png",
+        "pagePath": "pages/mzf_tabBar/contect/contect",
+        "text": "联系我们"
+      }
+    ]
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+
+}

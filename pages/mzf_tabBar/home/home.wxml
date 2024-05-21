@@ -1,0 +1,26 @@
+<!--pages/mzf_tabBar/home/home.wxml-->
+
+<!--轮播-->
+<swiper indicator-dots circular>
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+
+
+<!--菜单-->
+<view class="grid-list"> 
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/mzf_tabBar/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
+    <image src="{{item.icon}}" mode="aspectFit"> {{item.icon}}</image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+
+<view class="mzf_fenGe"> 
+===============================
+</view>
+
+<view class="img-box"> 
+  <image src="/images/mzftabBar/grid/1.png" mode="widthFix"/>
+  <image src="/images/mzftabBar/grid/1.png" mode=""/>
+</view>

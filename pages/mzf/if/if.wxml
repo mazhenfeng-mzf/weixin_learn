@@ -1,0 +1,50 @@
+<!--pages/mzf/if/if.wxml-->
+
+<view> ======= if ========== </view>
+
+<view wx:if="{{type == 1}}"> 1 </view>
+<view wx:elif="{{type == 2}}"> 2 </view>
+<view wx:else> 3 </view>
+
+<view> ======= block ========== </view>
+<view> ======= block 不会渲染出来，只起到包装作用 ========== </view>
+<block wx:if="{{type == 1}}">
+  <view class="username"> 1 </view>
+  <view> 2 </view>
+</block>
+
+
+<view> ======= view 会渲染出来 ========== </view>
+<view wx:if="{{type == 1}}">
+  <view> 1 </view>
+  <view> 2 </view>
+</view>
+
+<view> ======= hidden ========== </view>
+<view hidden="{{true}}"> 条件 true 的时候隐藏元素，否则显示 </view>
+
+<view> hidden 适合频繁切换的场景 </view>
+<view> if 适合控制条件复杂的场景 </view>
+
+<view> ======= for list ========== </view>
+<view wx:for="{{arr1}}" wx:key="index">
+ index: {{index}}, item：{{item}} 
+</view>
+
+<view> ======= for-item for-index========== </view>
+<view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx"> index: {{idx}}, item：{{itemName}} </view>
+
+
+<view> ================= </view>
+<view> wx:key： 指定唯一的key值，提高渲染性能 </view>
+
+
+<view> ======= for map ========== </view>
+<view wx:for="{{userList}}" wx:key="id"> {{item.id}}.{{item.name}} </view>
+
+
+<button>
+  <navigator open-type="navigateBack" delta="1"> 返回上一步-声明式</navigator>
+</button>
+
+<button bind:tap="gotoBack"> 返回上一步-编程式</button>

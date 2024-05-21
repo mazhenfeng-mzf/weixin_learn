@@ -1,0 +1,26 @@
+/* pages/mzf_tabBar/shoplist/shoplist.wxss */
+.shop-item {
+  display: flex;
+  padding: 15rpx;
+  border: 1rpx solid #ec1d1d;
+  border-radius: 100rpx;
+  box-shadow: 3rpx 3rpx 30rpx #ddd;
+  margin: 15rpx;
+}
+
+.thumb image {
+  width: 250rpx;
+  height: 250rpx;
+  display: block;
+  margin-right: 15rpx;
+}
+
+.info {
+  display:grid;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+
+.shop-title {
+  font-weight: bold;
+}

@@ -1,0 +1,7 @@
+<!--pages/mzf/button/button.wxml-->
+<button type="primary" bind:tap="btnTapHandler" data-info="{{24}}"> 按钮 </button>
+
+<button type="primary" bind:tap="changeCount"> 按钮+1 </button>
+
+
+<button type="primary" bind:tap="changeCountInfo" data-info="{{2}}"> 按钮+2 </button>

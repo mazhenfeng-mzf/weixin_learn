@@ -1,0 +1,5 @@
+<!--components/test5/test5.wxml-->
+<text> test5count: {{test5count}}</text>
+<button bind:tap="addCount"> count+1</button>
+
+<view>myBehaviors: {{username}}</view>

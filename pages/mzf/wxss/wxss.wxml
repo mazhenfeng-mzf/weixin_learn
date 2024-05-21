@@ -1,0 +1,6 @@
+<!--pages/mzf/wxss/wxss.wxml-->
+<text class="username">pages/mzf/wxss/wxss.wxml</text>
+
+<view class="username"> 1 </view>
+<view> 2 </view>
+<view> 3 </view>

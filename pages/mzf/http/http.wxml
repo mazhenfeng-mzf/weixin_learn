@@ -1,0 +1,4 @@
+<!--pages/mzf/http/http.wxml-->
+<button type="primary" bind:tap="getInfo"> getInfo </button>
+
+<button type="primary" bind:tap="postInfo"> postInfo </button>

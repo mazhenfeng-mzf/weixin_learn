@@ -1,0 +1,5 @@
+<!--pages/mzf/input/input.wxml-->
+<input bindinput="inputHandler"> </input>
+
+
+<input bindinput="inputHandlerMsg"> </input>

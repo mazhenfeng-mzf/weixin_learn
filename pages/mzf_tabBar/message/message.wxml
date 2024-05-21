@@ -1,0 +1,75 @@
+<!--wxs.src 必须是相对路径-->
+<wxs src="../../../utils/tools.wxs" module="m2"/>
+
+<!--pages/mzf_tabBar/message/message.wxml-->
+<text>pages/mzf_tabBar/message/message.wxml</text>
+
+<button>
+  <navigator url="/pages/mzf/if/if" open-type="navigate"> 切换到非tabbar页面</navigator>
+</button>
+
+<button>
+  <navigator url="/pages/mzf_tabBar/contect/contect" open-type="switchTab"> 切换到tabbar-contect</navigator>
+</button>
+
+<button>
+  <navigator open-type="navigateBack" delta="1"> 返回上一步</navigator>
+</button>
+
+<button bind:tap="gotoContect"> switchTab跳转到contect</button>
+
+<button bind:tap="navagateToListWithArgs"> navagateTo跳转到list</button>
+
+<button bind:tap="gotoBack"> 后退</button>
+
+<view>======url 带参数</view>
+<button>
+  <navigator url="/pages/mzf/if/if?name=zs&age=20" open-type="navigate"> 切换到非tabbar页面</navigator>
+</button>
+
+<button bind:tap="navagateToListWithArgs"> navagateTo跳转到list</button>
+
+
+<view>{{m1.toUpper(username)}}</view>
+<view>str不能直接调用原生的toUpperCase{{username.toUpperCase()}}</view>
+<view>{{m2.toLower(username)}}</view>
+
+<wxs module="m1"> 
+  module.exports.toUpper = function(str) {
+    return str.toUpperCase()
+  }
+</wxs>
+
+<view> ==== 下拉刷新重置 =====</view>
+<view> data:{{mzfdata}} </view>
+<button bind:tap="xiaLaAdd1"> +1 </button>
+<view> ==== =====</view>
+
+<view>  ==== 这里引入 /component/test/test 组件 </view>
+<my-test max="20"></my-test>
+<view>  </view>
+<view>  ==== 这里引入 /component/test2/test2 组件 </view>
+<my-test2></my-test2>
+
+<view>  ==== 这里引入 /component/test4/test4 组件 </view>
+<my-test4>
+  <view slot="before">这是before插槽填充的内容</view>
+</my-test4>
+
+
+
+<view>  ==== 这里引入 /component/test4/test4 组件 </view>
+<my-test4>
+  <view slot="before">这是before插槽填充的内容</view>
+</my-test4>
+
+<view>  ==== 属性绑定，用于父向子模块传递值, 引入 test5 组件</view>
+<view>  ==== 事件绑定，用于子向父模块传递值, 引入 test5 组件</view>
+<my-test5 test5count="{{count}}" bind:sync="syncCount" class="customA" id="cA"></my-test5>
+<view> parent-count: {{count}}</view>
+<view>事件绑定总结：1、子模块调用triggerEvent向父发送sync信号 和 数据。
+  2、父：定义了bind， sync信号触发函数 syncCount。
+  3、父收到的参数 e.detail。 </view>
+
+<view> ==== selectComponent, test5 添加选择器class 或者 id</view>
+<button bind:tap="getChildTest5"> 获取子模块test5的实例对象, 然后替他+1</button>

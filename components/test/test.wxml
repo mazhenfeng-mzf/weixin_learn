@@ -1,0 +1,11 @@
+<!--components/test/test.wxml-->
+<view>11</view>
+<view  style="background-color: rgb({{fullColor}});" class="colorBox">{{fullColor}}</view>
+
+<button size="mini" bind:tap="changeR" type="default">R</button>
+<button size="mini" bind:tap="changeG" type="primary">G</button>
+<button size="mini" bind:tap="changeB" type="warn">B</button>
+<!-- <view>{{rgb.r}},{{rgb.g}},{{rgb.b}}</view> -->
+
+<view>count: {{count}}</view>
+<button size="mini" bind:tap="addCount" type="default">count+1</button>
